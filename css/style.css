@@ -247,14 +247,14 @@ button {
 .hero__img {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -6%;
   left: 0;
   width: 100%;
-  height: 112%;
+  height: 116%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  -o-object-position: center 72%;
+     object-position: center 72%;
   transform-origin: center;
   backface-visibility: hidden;
   will-change: transform;
