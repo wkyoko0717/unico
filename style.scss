@@ -343,9 +343,13 @@ button {
     justify-content: center;
     text-align: center;
     color: $color-white;
-    padding: 80px 28px 60px;
+    padding: 56px 28px 84px;
     transform: translateZ(0);
     backface-visibility: hidden;
+
+    @media (min-width: $bp-md) {
+      padding: 80px 28px 60px;
+    }
   }
 
   &__section-num {

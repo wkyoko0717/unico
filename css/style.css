@@ -277,9 +277,14 @@ button {
   justify-content: center;
   text-align: center;
   color: #faf8f5;
-  padding: 80px 28px 60px;
+  padding: 56px 28px 84px;
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+@media (min-width: 768px) {
+  .hero__content {
+    padding: 80px 28px 60px;
+  }
 }
 .hero__section-num {
   font-family: "Cormorant Garamond", serif;
