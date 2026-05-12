@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const hideLoader = () => {
     gsap.to(loader, {
       opacity: 0,
-      duration: 0.9,
+      duration: 0.45,
       ease: 'power2.out',
-      delay: 0.2,
+      delay: 0.1,
       onComplete: () => {
         loader.classList.add('is-hidden');
         initHeroAnimation();
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ページ読み込み完了後にローダー非表示
   if (document.readyState === 'complete') {
-    setTimeout(hideLoader, 1400);
+    setTimeout(hideLoader, 700);
   } else {
     window.addEventListener('load', () => {
-      setTimeout(hideLoader, 1400);
+      setTimeout(hideLoader, 700);
     });
   }
 
@@ -43,33 +43,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // HERO アニメーション（ローダー後）
   // ============================
   function initHeroAnimation() {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    const heroTextEls = '.hero__logo, .hero__sub, .hero__tag, .hero__copy';
+    const tl = gsap.timeline({
+      defaults: { ease: 'power3.out' },
+      onComplete: () => {
+        gsap.set(heroTextEls, { clearProps: 'transform' });
+      }
+    });
 
     tl.to('.hero__logo', {
       opacity: 1,
       y: 0,
-      duration: 1.3,
+      duration: 0.85,
     })
     .to('.hero__sub', {
       opacity: 1,
       y: 0,
-      duration: 0.9,
-    }, '-=0.7')
+      duration: 0.65,
+    }, '-=0.45')
     .to('.hero__tag', {
       opacity: 1,
       y: 0,
-      duration: 0.9,
-    }, '-=0.6')
+      duration: 0.65,
+    }, '-=0.42')
     .to('.hero__copy', {
       opacity: 1,
       y: 0,
-      duration: 0.9,
-    }, '-=0.5')
+      duration: 0.65,
+    }, '-=0.38')
     .to('.hero__scroll', {
       opacity: 1,
-      duration: 0.8,
+      duration: 0.5,
       ease: 'power2.out',
-    }, '-=0.3');
+    }, '-=0.18');
   }
 
   // Hero要素の初期位置セット
@@ -86,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.to('.hero__img', {
     yPercent: -7,
     ease: 'none',
+    force3D: true,
     scrollTrigger: {
       trigger: '.hero',
       start: 'top top',
@@ -113,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================
   // JS-REVEAL: 汎用フェードアップ
   // ============================
-  const revealEls = document.querySelectorAll('.js-reveal');
+  const revealEls = document.querySelectorAll('.js-reveal:not(.about__card)');
 
   revealEls.forEach((el) => {
     gsap.to(el, {
@@ -174,17 +181,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // ABOUT: カードのフェードイン
   // ============================
   gsap.utils.toArray('.about__card').forEach((card) => {
-    gsap.from(card, {
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 86%',
-        once: true,
+    gsap.fromTo(card,
+      {
+        opacity: 0,
+        y: 28,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.out',
+        clearProps: 'transform',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 88%',
+          once: true,
+        }
       }
-    });
+    );
   });
 
 

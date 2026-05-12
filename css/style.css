@@ -56,7 +56,7 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .loader.is-hidden {
   opacity: 0;
@@ -70,7 +70,7 @@ button {
   letter-spacing: 0.02em;
   opacity: 0;
   transform: translateY(12px);
-  animation: loaderFadeIn 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+  animation: loaderFadeIn 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
 }
 .loader__bar {
   width: 60px;
@@ -85,7 +85,7 @@ button {
   height: 100%;
   background: #8c7b6e;
   transform: translateX(-100%);
-  animation: loaderBar 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+  animation: loaderBar 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
 }
 
 @keyframes loaderFadeIn {
@@ -226,6 +226,8 @@ button {
 .hero__bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  will-change: transform;
 }
 .hero__picture {
   display: block;
@@ -245,10 +247,13 @@ button {
   -o-object-position: center top;
      object-position: center top;
   transform-origin: center;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 .hero__content {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,6 +261,8 @@ button {
   text-align: center;
   color: #faf8f5;
   padding: 80px 28px 60px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .hero__section-num {
   font-family: "Cormorant Garamond", serif;
@@ -299,6 +306,7 @@ button {
 }
 .hero__scroll {
   position: absolute;
+  z-index: 1;
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
@@ -842,12 +850,14 @@ button {
   transform: translateX(3px);
 }
 .access__qr {
+  display: block;
   width: 110px;
   min-height: 110px;
   padding: 8px;
   background: #faf8f5;
   border-radius: 3px;
   box-shadow: 0 2px 12px rgba(58, 48, 42, 0.08);
+  text-decoration: none;
 }
 .access__qr img {
   width: 100%;
@@ -863,6 +873,8 @@ button {
   letter-spacing: 0.04em;
   color: #7a6e66;
   text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .access__special {
   background: linear-gradient(135deg, rgba(140, 123, 110, 0.64) 0%, rgba(140, 123, 110, 0.64) 100%);
