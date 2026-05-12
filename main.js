@@ -227,14 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.fromTo(card,
       {
         opacity: 0,
-        y: 28,
       },
       {
         opacity: 1,
-        y: 0,
         duration: 1,
         ease: 'power2.out',
-        clearProps: 'transform',
         scrollTrigger: {
           trigger: card,
           start: 'top 88%',

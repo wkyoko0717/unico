@@ -348,7 +348,7 @@ button {
 
   &__logo {
     font-family: $font-script;
-    font-size: clamp(4.2rem, 15vw, 7rem);
+    font-size: clamp(4.2rem, 12vw, 5rem);
     color: #000;
     line-height: 1;
     margin-bottom: 14px;
@@ -796,7 +796,11 @@ button {
     background: $color-bg-card;
     border-radius: 3px;
     padding: 28px 22px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+
+    &.js-reveal {
+      transform: none;
+    }
   }
 
   &__card-title {
@@ -867,7 +871,7 @@ button {
 // ============================================================
 .access {
   padding: 88px 0;
-  background: $color-bg-alt url("../images/bg_03.png") center center / cover no-repeat;
+  background: $color-bg-alt url("../images/bg_04.png") center center / cover no-repeat;
 
   &__inner {
     max-width: 600px;
@@ -1058,8 +1062,8 @@ button {
 
   &__special {
     background: linear-gradient(135deg,
-        rgba($color-accent, 0.64) 0%,
-        rgba($color-accent, 0.64) 100%);
+        rgba($color-accent, 0.4) 0%,
+        rgba($color-accent, 0.4) 100%);
     border: 1px solid rgba($color-accent, 0.28);
     border-radius: 20px;
     padding: 32px 28px;
@@ -1071,14 +1075,14 @@ button {
     font-size: 0.75rem;
     font-style: italic;
     letter-spacing: 0.18em;
-    color: $color-white;
+    color: $color-accent;
     margin-bottom: 8px;
   }
 
   &__special-sub {
     font-size: 0.75rem;
     letter-spacing: 0.06em;
-    color: $color-white;
+    color: $color-text;
     margin-bottom: 14px;
   }
 
@@ -1093,16 +1097,20 @@ button {
     font-family: $font-serif-jp;
     font-size: 1.5rem;
     font-weight: 400;
-    color: $color-text;
+    color: $color-white;
     letter-spacing: 0.05em;
     margin-bottom: 20px;
+    text-shadow:
+      0 0 8px rgba($color-white, 0.85),
+      0 0 18px rgba($color-white, 0.55),
+      0 2px 10px rgba($color-hero-dark, 0.18);
   }
 
   &__special-brand {
     font-family: $font-serif;
     font-size: 0.72rem;
     letter-spacing: 0.22em;
-    color: $color-white;
+    color: $color-text-light;
     margin-top: 10px;
   }
 }
