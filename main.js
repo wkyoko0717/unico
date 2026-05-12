@@ -9,6 +9,45 @@ document.addEventListener('DOMContentLoaded', () => {
   // GSAP プラグイン登録
   // ============================
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
+
+  // ============================
+  // MOBILE VIEWPORT: iPhone toolbar対策
+  // ============================
+  const root = document.documentElement;
+  let viewportWidth = window.innerWidth;
+
+  const isMobileViewport = () => window.matchMedia('(max-width: 767px)').matches;
+
+  const setHeroViewportHeight = () => {
+    const viewport = window.visualViewport;
+    const height = viewport ? viewport.height : window.innerHeight;
+    root.style.setProperty('--hero-height', `${Math.round(height)}px`);
+    root.style.setProperty('--section-height', `${Math.round(height * 0.88)}px`);
+  };
+
+  setHeroViewportHeight();
+
+  window.addEventListener('resize', () => {
+    const nextWidth = window.innerWidth;
+
+    if (isMobileViewport() && Math.abs(nextWidth - viewportWidth) < 24) {
+      return;
+    }
+
+    viewportWidth = nextWidth;
+    setHeroViewportHeight();
+    ScrollTrigger.refresh();
+  });
+
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      viewportWidth = window.innerWidth;
+      setHeroViewportHeight();
+      ScrollTrigger.refresh();
+    }, 300);
+  });
 
 
   // ============================
@@ -87,32 +126,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ============================
-  // HERO パララックス
+  // PARALLAX
   // ============================
-  gsap.to('.hero__img', {
-    yPercent: -7,
-    ease: 'none',
-    force3D: true,
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 1.2,
-    }
-  });
+  ScrollTrigger.matchMedia({
+    '(min-width: 768px)': () => {
+      gsap.to('.hero__img', {
+        yPercent: -7,
+        ease: 'none',
+        force3D: true,
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.2,
+        }
+      });
 
-
-  // ============================
-  // CONCEPT パララックス
-  // ============================
-  gsap.to('.concept__img', {
-    yPercent: -15,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.concept',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: 1.2,
+      gsap.to('.concept__img', {
+        yPercent: -15,
+        ease: 'none',
+        force3D: true,
+        scrollTrigger: {
+          trigger: '.concept',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.2,
+        }
+      });
+    },
+    '(max-width: 767px)': () => {
+      gsap.set('.hero__img, .concept__img', { clearProps: 'transform' });
     }
   });
 
