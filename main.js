@@ -155,7 +155,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     '(max-width: 767px)': () => {
-      gsap.set('.hero__img, .concept__img', { clearProps: 'transform' });
+      gsap.to('.hero__img', {
+        yPercent: -4,
+        ease: 'none',
+        force3D: true,
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 0.8,
+        }
+      });
+
+      gsap.to('.concept__img', {
+        yPercent: -6,
+        ease: 'none',
+        force3D: true,
+        scrollTrigger: {
+          trigger: '.concept',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.8,
+        }
+      });
     }
   });
 
