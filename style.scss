@@ -844,8 +844,8 @@ button {
   &__profile-item {
     background: $color-bg-card;
     padding: 12px 14px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
     gap: 5px;
   }
 
@@ -853,6 +853,7 @@ button {
     font-size: 0.62rem;
     letter-spacing: 0.14em;
     color: $color-text-light;
+    text-align: center;
   }
 
   &__profile-value {
@@ -861,6 +862,8 @@ button {
     color: $color-text;
     line-height: 1.55;
     letter-spacing: 0.02em;
+    text-align: center;
+    align-self: center;
   }
 
   &__message {
