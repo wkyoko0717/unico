@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>unico. nail | PRIVATE NAIL SALON</title>
+  <meta name="description" content="千葉・蘇我のプライベートネイルサロン。あなたらしさを、指先から美しく。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=WindSong:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- ローダー -->
+  <div class="loader" id="loader">
+    <p class="loader__logo">unico.</p>
+    <div class="loader__bar"><span class="loader__bar-fill"></span></div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="header__logo">unico.</a>
+      <nav class="header__nav" aria-label="グローバルナビゲーション">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#access">Access</a>
+        <a href="#reservation">Reservation</a>
+      </nav>
+      <button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="header__mobile-nav" id="mobileNav" aria-label="モバイルナビゲーション">
+      <a href="#menu" class="mobile-nav__link">Menu / Price</a>
+      <a href="#about" class="mobile-nav__link">About / Profile</a>
+      <a href="#access" class="mobile-nav__link">Access</a>
+      <a href="#reservation" class="mobile-nav__link">Reservation</a>
+      <a href="#instagram" class="mobile-nav__link">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==============================
+         01 HERO / FIRST VIEW
+    ============================== -->
+    <section class="hero" id="top">
+      <div class="hero__bg">
+        <picture class="hero__picture">
+          <source srcset="images/bg_01.png" media="(orientation: landscape)">
+          <img src="images/hero.png" alt="" class="hero__img" loading="eager">
+        </picture>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <span class="hero__section-num">01 — HERO / FIRST VIEW</span>
+        <h1 class="hero__logo">unico.</h1>
+        <p class="hero__sub">unico. nail</p>
+        <p class="hero__tag">PRIVATE NAIL SALON</p>
+        <p class="hero__copy">感性が通うニュアンスネイル</p>
+      </div>
+      <div class="hero__scroll">
+        <div class="hero__scroll-line"></div>
+        <span class="hero__scroll-text">SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ==============================
+         02 CONCEPT
+    ============================== -->
+    <section class="concept" id="concept">
+      <div class="concept__bg">
+        <picture class="concept__picture">
+          <source srcset="images/bg_02.png" media="(orientation: landscape)">
+          <img src="images/concept.png" alt="" class="concept__img" loading="lazy">
+        </picture>
+        <div class="concept__overlay"></div>
+      </div>
+      <div class="concept__content">
+        <span class="concept__section-num js-reveal">02 — CONCEPT</span>
+        <h2 class="concept__heading js-reveal">Concept</h2>
+        <div class="concept__divider js-reveal"></div>
+        <p class="concept__text js-reveal">
+          日常に寄り添い<br>
+          そっと背中を押せるような、<br>
+          プライベートな癒しの空間。<br><br>
+          指先から心まで整う時間を<br>
+          お届けします。
+        </p>
+      </div>
+    </section>
+
+    <!-- ==============================
+         03 NAIL DESIGN GALLERY
+    ============================== -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__inner">
+        <div class="gallery__header">
+          <span class="gallery__section-num js-reveal">03 — NAIL DESIGN GALLERY</span>
+          <h2 class="gallery__heading js-reveal">Nail Design Gallery</h2>
+          <div class="gallery__divider js-reveal"></div>
+        </div>
+        <div class="gallery__grid">
+          <div class="gallery__item">
+            <img src="images/nail_01.jpg" alt="ネイルデザイン 01" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/hand_03.jpg" alt="ネイルデザイン 02" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/hand_01.jpg" alt="ネイルデザイン 03" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/nail_04.jpg" alt="ネイルデザイン 04" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/nail_02.jpg" alt="ハンドネイル 01" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/hand_02.jpg" alt="ハンドネイル 02" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/hand_06.jpg" alt="ハンドネイル 03" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/nail_05.jpg" alt="ハンドネイル 04" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/nail_03.jpg" alt="ハンドネイル 05" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+          <div class="gallery__item">
+            <img src="images/foot_02.jpg" alt="フットネイル 01" loading="lazy">
+            <div class="gallery__overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         04 MENU / PRICE
+    ============================== -->
+    <section class="menu" id="menu">
+      <div class="menu__inner">
+        <div class="menu__header">
+          <span class="menu__section-num js-reveal">04 — MENU / PRICE</span>
+          <h2 class="menu__heading js-reveal">Menu / Price</h2>
+        </div>
+
+        <!-- ケアメニュー -->
+        <div class="menu__category js-reveal">
+          <h3 class="menu__category-title">ケアメニュー</h3>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">ネイルケアコース</span>
+                <span class="menu__item-desc">爪の形整え、キューティクルケア、バッフィング、ベースコート仕上げ</span>
+              </div>
+              <span class="menu__item-price">¥4,000</span>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">フットケアコース</span>
+                <span class="menu__item-desc">フットバス、爪整え、キューティクルケア、バッフィング、ベースコート仕上げ</span>
+              </div>
+              <span class="menu__item-price">¥5,000</span>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">クリアジェル</span>
+                <span class="menu__item-desc">自爪の補強におすすめ</span>
+              </div>
+              <span class="menu__item-price">¥5,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ジェルメニュー -->
+        <div class="menu__category js-reveal">
+          <h3 class="menu__category-title">
+            ジェルメニュー
+            <span class="menu__category-note">自店付け替えオフ無料</span>
+          </h3>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <span class="menu__item-name">ワンカラー</span>
+              <span class="menu__item-price">¥6,000</span>
+            </li>
+            <li class="menu__item">
+              <span class="menu__item-name">マグネットカラー</span>
+              <span class="menu__item-price">¥7,000</span>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">シンプルアート</span>
+                <span class="menu__item-desc">お好きなカラー、お好きなアート、4本迄</span>
+              </div>
+              <span class="menu__item-price">¥7,000</span>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">レギュラーアート</span>
+                <span class="menu__item-desc">お好きなカラー、お好きなアート、6本迄</span>
+              </div>
+              <span class="menu__item-price">¥8,000</span>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">デラックスアート</span>
+                <span class="menu__item-desc">お好きなアート7〜10本</span>
+              </div>
+              <span class="menu__item-price">¥9,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- サイドメニュー -->
+        <div class="menu__category js-reveal">
+          <h3 class="menu__category-title">サイドメニュー</h3>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <span class="menu__item-name">他店付け替えオフ</span>
+              <span class="menu__item-price">¥2,000</span>
+            </li>
+            <li class="menu__item">
+              <div class="menu__item-info">
+                <span class="menu__item-name">ジェルオフのみケア込み</span>
+                <span class="menu__item-desc">しばらくジェルネイルをお休みされたい方に。しっかりウォーターケアをし、強化ベースコートまでお仕上げ致します。</span>
+              </div>
+              <span class="menu__item-price">¥2,000</span>
+            </li>
+            <li class="menu__item">
+              <span class="menu__item-name">亀裂補強</span>
+              <span class="menu__item-price">¥300</span>
+            </li>
+            <li class="menu__item">
+              <span class="menu__item-name">長さ出し</span>
+              <span class="menu__item-price">¥500</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         05 ABOUT / PROFILE
+    ============================== -->
+    <section class="about" id="about">
+      <div class="about__inner">
+        <div class="about__header">
+          <span class="about__section-num js-reveal">05 — ABOUT / PROFILE</span>
+          <h2 class="about__heading js-reveal">自己紹介します</h2>
+        </div>
+
+        <div class="about__photo js-reveal">
+          <img src="images/ayako.png" alt="Ayako" loading="lazy">
+        </div>
+        <h3 class="about__name js-reveal">Ayako</h3>
+
+        <div class="about__card js-reveal">
+          <h4 class="about__card-title">Profile</h4>
+          <div class="about__profile-grid">
+            <div class="about__profile-item">
+              <span class="about__profile-label">誕生日</span>
+              <span class="about__profile-value">5月15日</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">血液型</span>
+              <span class="about__profile-value">O型</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">ニックネーム</span>
+              <span class="about__profile-value">ウニちゃん</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">性格</span>
+              <span class="about__profile-value">エンパス<br>涙もろい</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">仕事</span>
+              <span class="about__profile-value">nail artist</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">住んでる所</span>
+              <span class="about__profile-value">千葉市中央区</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__card js-reveal">
+          <h4 class="about__card-title">My Favorites</h4>
+          <div class="about__profile-grid">
+            <div class="about__profile-item">
+              <span class="about__profile-label">資格</span>
+              <span class="about__profile-value">ネイリスト技能検定1級<br />サービス接遇技能検定2級</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">趣味</span>
+              <span class="about__profile-value">オラクルカード<br />タロットカード<br />古着屋巡り</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">経歴</span>
+              <span class="about__profile-value">ネイリスト歴7年<br />美容部員6年<br />アパレル10年</span>
+            </div>
+            <div class="about__profile-item">
+              <span class="about__profile-label">好きな食べ物</span>
+              <span class="about__profile-value">生クリーム盛り盛り</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__message js-reveal">
+          <h4 class="about__card-title">Message</h4>
+          <p>初めまして、nail artist の Aya
+            です。<br /><br />美容部員、アパレル等の経験から、トータルでお似合いになる唯一無二のデザインをご提案します。インクアート、鉱物、滲みアートが得意です。
+            <br /><br />最近は施術をしながらスピリチュアルトークもしています。タロットカード勉強中。いつか、スピとネイルを融合したサロンにしたいです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         06 ACCESS / RESERVATION
+    ============================== -->
+    <section class="access" id="access">
+      <div class="access__inner">
+        <div class="access__header">
+          <span class="access__section-num js-reveal">06 — ACCESS / RESERVATION</span>
+          <h2 class="access__heading js-reveal">Access</h2>
+          <div class="access__divider js-reveal"></div>
+        </div>
+
+        <ul class="access__info">
+          <li class="access__info-item js-reveal">
+            <span class="access__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+            </span>
+            <span>蘇我駅東口徒歩13分</span>
+          </li>
+          <li class="access__info-item js-reveal">
+            <span class="access__icon-wrap access__icon-wrap--p" aria-hidden="true">P</span>
+            <span>無料P完備</span>
+          </li>
+          <li class="access__info-item js-reveal">
+            <span class="access__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3" />
+                <rect x="9" y="11" width="14" height="10" rx="2" />
+                <circle cx="12" cy="16" r="1" />
+                <circle cx="20" cy="16" r="1" />
+              </svg>
+            </span>
+            <span>初めてのご来店の方は、近くのドラッグストアへお迎えに伺います。</span>
+          </li>
+        </ul>
+
+        <div class="access__photos js-reveal">
+          <div class="access__photo">
+            <img src="images/room_01.jpg" alt="サロン内 1" loading="lazy">
+          </div>
+          <div class="access__photo">
+            <img src="images/room_02.jpg" alt="サロン内 2" loading="lazy">
+          </div>
+        </div>
+
+        <div class="access__reservation" id="reservation">
+          <a href="#" class="access__btn js-reveal">
+            ご予約・お問い合わせはこちら
+            <!-- <span class="access__btn-arrow">→</span> -->
+          </a>
+          <div class="access__qr js-reveal">
+            <img src="images/qr.jpg" alt="LINE QRコード">
+            <a href="https://line.me/R/ti/p/@349qkjyk" class="access__qr-link" target="_blank"
+              rel="noopener noreferrer">https://line.me</a>
+          </div>
+        </div>
+
+        <div class="access__special js-reveal">
+          <p class="access__special-label">Special</p>
+          <p class="access__special-sub">公式LINE登録新規登録頂いた方限定</p>
+          <div class="access__special-divider"></div>
+          <p class="access__special-main">他店様オフ無料</p>
+          <p class="access__special-brand">unico. nail</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         07 INSTAGRAM / FOOTER
+    ============================== -->
+    <footer class="footer" id="instagram">
+      <div class="footer__inner">
+        <div class="footer__follow">
+          <span class="footer__section-num js-reveal">07 — INSTAGRAM / FOOTER</span>
+          <h2 class="footer__follow-heading js-reveal">Follow me</h2>
+          <div class="footer__divider js-reveal"></div>
+        </div>
+
+        <div class="footer__sns">
+          <a href="https://www.instagram.com/unico_ayanail/" class="footer__sns-item" target="_blank"
+            rel="noopener noreferrer">
+            <span class="footer__sns-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span>@unico_ayanail</span>
+          </a>
+          <a href="https://threads.net/@unico_ayanail" class="footer__sns-item" target="_blank"
+            rel="noopener noreferrer">
+            <span class="footer__sns-icon footer__sns-icon--threads" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.474 12.01v-.017c.03-3.579.882-6.43 2.525-8.482C5.848 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.594 12c.022 3.089.714 5.5 2.051 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.772-2.050 1.604-1.617 1.594-3.593 1.036-4.798-.27-.595-.705-1.032-1.3-1.336-.174 1.218-.608 2.281-1.332 3.155-1.005 1.22-2.545 1.934-4.438 2.065-1.485.103-2.975-.225-4.061-.88-1.2-.72-1.888-1.82-1.936-3.102-.053-1.387.54-2.55 1.667-3.27 1.025-.657 2.455-1.01 4.135-1.027.87-.01 1.69.032 2.45.133-.106-.612-.37-1.107-.797-1.486-.534-.474-1.319-.714-2.333-.714-.78 0-1.45.165-2.065.484l-.817-1.786c.892-.43 1.878-.64 2.946-.64 1.7 0 3.043.489 3.992 1.452.875.888 1.327 2.122 1.354 3.664a12.97 12.97 0 0 1 .738.232c1.132.43 2.034 1.129 2.587 2.342.843 1.853.788 4.682-1.435 6.97C17.25 22.998 15.135 23.98 12.186 24zm.017-10.073c-1.32.001-2.437.23-3.183.686-.553.345-.83.816-.812 1.362.017.452.262.857.672 1.1.568.341 1.427.538 2.314.538a.76.76 0 0 0 .066-.002c1.315-.089 2.29-.539 2.9-1.263.51-.61.751-1.43.753-2.416-.56-.12-1.19-.003-2.71-.005z" />
+              </svg>
+            </span>
+            <span>threads.net/@unico_ayanail</span>
+          </a>
+        </div>
+
+        <div class="footer__brand js-reveal">
+          <p class="footer__brand-logo">unico.</p>
+          <p class="footer__brand-name">unico. nail</p>
+          <p class="footer__brand-tag">PRIVATE NAIL SALON</p>
+        </div>
+
+        <nav class="footer__nav js-reveal" aria-label="フッターナビゲーション">
+          <a href="#top">TOP</a>
+          <a href="#menu">MENU / PRICE</a>
+          <a href="#about">ABOUT / PROFILE</a>
+          <a href="#access">ACCESS</a>
+          <a href="#reservation">RESERVATION</a>
+          <a href="https://www.instagram.com/unico_nail_ayako/" target="_blank" rel="noopener">INSTAGRAM</a>
+          <a href="https://threads.net/@unico_nail_ayako" target="_blank" rel="noopener">THREADS</a>
+          <a href="#">PRIVACY POLICY</a>
+        </nav>
+
+        <p class="footer__copy">© unico. nail All rights reserved.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ページトップへ戻るボタン -->
+  <button class="page-top" id="pageTop" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
