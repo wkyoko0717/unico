@@ -298,6 +298,7 @@ button {
   }
 
   &__picture {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
@@ -313,13 +314,23 @@ button {
   }
 
   &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 108%;
+    height: 112%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center bottom;
     transform-origin: center;
     backface-visibility: hidden;
     will-change: transform;
+
+    @media (min-width: $bp-md) {
+      position: static;
+      height: 108%;
+      object-position: center top;
+    }
   }
 
   &__content {
