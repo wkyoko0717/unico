@@ -330,7 +330,7 @@ button {
   position: absolute;
   z-index: 1;
   bottom: 32px;
-  right: 18px;
+  left: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -339,7 +339,7 @@ button {
 }
 @media (min-width: 768px) {
   .hero__scroll {
-    right: 32px;
+    left: 32px;
   }
 }
 .hero__scroll-line {
@@ -364,6 +364,7 @@ button {
   font-size: 0.55rem;
   letter-spacing: 0.4em;
   color: rgba(250, 248, 245, 0.8);
+  text-shadow: 0 0 8px rgba(42, 31, 24, 0.9), 0 0 18px rgba(42, 31, 24, 0.75);
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
