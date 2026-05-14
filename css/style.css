@@ -330,6 +330,7 @@ button {
 }
 .hero__copy::before {
   content: "";
+  display: none;
   position: absolute;
   inset: -16px -14px;
   z-index: -1;
@@ -340,8 +341,7 @@ button {
 .hero__scroll {
   position: absolute;
   z-index: 1;
-  bottom: 32px;
-  left: 18px;
+  bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -351,7 +351,6 @@ button {
 }
 .hero__scroll::before {
   content: "";
-  display: none;
   position: absolute;
   inset: -16px -14px;
   z-index: -1;
@@ -359,15 +358,23 @@ button {
   filter: blur(8px);
   pointer-events: none;
 }
+.hero__scroll--left {
+  left: 18px;
+  display: none;
+}
 @media (min-width: 768px) {
-  .hero__scroll {
+  .hero__scroll--left {
     left: 32px;
   }
+}
+.hero__scroll--center {
+  left: 50%;
+  transform: translateX(-50%);
 }
 .hero__scroll-line {
   display: block;
   width: 1px;
-  height: 44px;
+  height: 64px;
   background: rgba(250, 248, 245, 0.45);
   position: relative;
   overflow: hidden;

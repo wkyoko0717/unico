@@ -416,8 +416,7 @@ button {
   &__scroll {
     position: absolute;
     z-index: 1;
-    bottom: 32px;
-    left: 18px;
+    bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -437,16 +436,26 @@ button {
       filter: blur(8px);
       pointer-events: none;
     }
+  }
+
+  &__scroll--left {
+    left: 18px;
+    display: none;
 
     @media (min-width: $bp-md) {
       left: 32px;
     }
   }
 
+  &__scroll--center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__scroll-line {
     display: block;
     width: 1px;
-    height: 44px;
+    height: 64px;
     background: rgba($color-white, 0.45);
     position: relative;
     overflow: hidden;
