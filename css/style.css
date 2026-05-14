@@ -708,9 +708,9 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(212, 200, 188, 0.36);
-  border: 1px solid rgba(212, 200, 188, 0.36);
-  border-radius: 12px;
+  background: rgba(212, 200, 188, 0.62);
+  border: 1px solid rgba(212, 200, 188, 0.62);
+  border-radius: 2px;
   overflow: hidden;
 }
 .about__profile-item {
