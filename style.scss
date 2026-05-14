@@ -404,8 +404,8 @@ button {
       inset: -16px -14px;
       z-index: -1;
       background: radial-gradient(ellipse at center,
-          rgba($color-hero-dark, 0.2) 0%,
-          rgba($color-hero-dark, 0.2) 40%,
+          rgba($color-hero-dark, 0) 0%,
+          rgba($color-hero-dark, 0) 40%,
           rgba($color-hero-dark, 0) 50%);
       filter: blur(8px);
       pointer-events: none;
@@ -430,9 +430,9 @@ button {
       inset: -16px -14px;
       z-index: -1;
       background: radial-gradient(ellipse at center,
-          rgba($color-hero-dark, 0.3) 0%,
-          rgba($color-hero-dark, 0.1) 40%,
-          rgba($color-hero-dark, 0) 50%);
+          rgba($color-text, 0.4) 0%,
+          rgba($color-text, 0.2) 20%,
+          rgba($color-text, 0.1) 80%);
       filter: blur(8px);
       pointer-events: none;
     }
