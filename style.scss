@@ -309,8 +309,8 @@ button {
     inset: 0;
     background: linear-gradient(to bottom,
         rgba($color-hero-dark, 0) 0%,
-        rgba($color-hero-dark, 0.48) 64%,
-        rgba($color-hero-dark, 0.2) 100%);
+        rgba($color-hero-dark, 0.3) 64%,
+        rgba($color-hero-dark, 0.1) 100%);
   }
 
   &__img {
@@ -388,6 +388,8 @@ button {
   }
 
   &__copy {
+    position: relative;
+    isolation: isolate;
     font-family: $font-serif-jp;
     font-size: clamp(0.84rem, 2.4vw, 0.72rem);
     font-weight: 300;
@@ -395,6 +397,19 @@ button {
     letter-spacing: 0.12em;
     color: rgba($color-white, 0.65);
     opacity: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -16px -14px;
+      z-index: -1;
+      background: radial-gradient(ellipse at center,
+          rgba($color-hero-dark, 0.2) 0%,
+          rgba($color-hero-dark, 0.2) 40%,
+          rgba($color-hero-dark, 0) 50%);
+      filter: blur(8px);
+      pointer-events: none;
+    }
   }
 
   &__scroll {
@@ -407,6 +422,20 @@ button {
     align-items: center;
     gap: 12px;
     opacity: 0;
+    isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -16px -14px;
+      z-index: -1;
+      background: radial-gradient(ellipse at center,
+          rgba($color-hero-dark, 0.3) 0%,
+          rgba($color-hero-dark, 0.1) 40%,
+          rgba($color-hero-dark, 0) 50%);
+      filter: blur(8px);
+      pointer-events: none;
+    }
 
     @media (min-width: $bp-md) {
       left: 32px;
@@ -437,9 +466,6 @@ button {
     font-size: 0.55rem;
     letter-spacing: 0.4em;
     color: rgba($color-white, 0.8);
-    text-shadow:
-      0 0 8px rgba($color-hero-dark, 0.9),
-      0 0 18px rgba($color-hero-dark, 0.75);
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
