@@ -308,9 +308,9 @@ button {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom,
-        rgba($color-hero-dark, 0.075) 0%,
-        rgba($color-hero-dark, 0.175) 50%,
-        rgba($color-hero-dark, 0.325) 100%);
+        rgba($color-hero-dark, 0) 0%,
+        rgba($color-hero-dark, 0.3) 50%,
+        rgba($color-hero-dark, 0.2) 100%);
   }
 
   &__img {
@@ -389,7 +389,7 @@ button {
 
   &__copy {
     font-family: $font-serif-jp;
-    font-size: clamp(0.8rem, 2.4vw, 0.72rem);
+    font-size: clamp(0.9rem, 2.6vw, 0.8rem);
     font-weight: 300;
     line-height: 1.9;
     letter-spacing: 0.12em;
